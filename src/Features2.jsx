@@ -5,10 +5,10 @@ import { house } from "./constants/house"
 const Features2 = () => {
   return (
     <div>
-        <h3>features2</h3>
+        <h3>features2 </h3>
     <div className='card-con2'>
-        {house.map((data, index)=>
-        <Cards2 Card2Details={data} key={index}/>
+        {house.map((data, i)=>
+        <Cards2 Card2Details={data} key={i}/>
         )}
     </div>
     </div>
