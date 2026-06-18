@@ -1,0 +1,124 @@
+/* import house from "./assets/Elevation.jpg" */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+li:hover {
+  text-decoration: underline;
+  color: rgb(95, 181, 95);
+  transition: 0.2s;
+}
+header h2 {
+  color: rgb(12, 83, 12);
+}
+button {
+  align-self: flex-start;
+  border-radius: 20px;
+  padding: 10px;
+  width: 5rem;
+  margin: 5px;
+  background-color: rgb(8, 74, 8);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero {
+  position: relative;
+  color: white;
+  height: 90vh;
+  text-align: center;
+  padding-top: 9rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.319);
+  z-index: -7;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hero p {
+  padding-top: 2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.hero input {
+  border-radius: 20px;
+  margin-top: 3rem;
+  width: 17rem;
+  padding: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(228, 245, 245);
+  align-items: center;
+  padding: 15px;
+}
+
+/* .link {
+    color: green;
+} */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.card-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.card2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.card-con2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 30px;
+  background-color: aquamarine;
+}
+
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+}
