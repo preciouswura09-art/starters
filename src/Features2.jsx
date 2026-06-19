@@ -5,7 +5,7 @@ import { house } from "./constants/house"
 const Features2 = () => {
   return (
     <div>
-        <h5>features</h5>
+        <h3>features2 </h3>
     <div className='card-con2'>
         {house.map((data, i)=>
         <Cards2 Card2Details={data} key={i}/>
