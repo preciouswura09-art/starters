@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "./components/Button";
+import { Menu } from "lucide-react";
 
 // The useEffect hook in React is a powerful tool for managing side effects in functional components. Side effects include tasks like fetching data, updating the DOM, setting up subscriptions, or cleaning up resources. It replaces lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount used in class components.import { ArrowRight } from "lucide-react";
 
@@ -8,11 +9,9 @@ import Button from "./components/Button";
 const Header = ({ text, setText, setImgBg, imgBg }) => {
   const [mode, setMode] = useState("dark");
 
-
-  useEffect(() => {
-    alert("hello world");
-  }, [mode, text]);
-
+  // useEffect(() => {
+  //   alert("hello world");
+  // }, [mode, text]);
 
   const rotateImage = () => {
     if (imgBg === "Elevation.jpg") {
@@ -30,21 +29,26 @@ const Header = ({ text, setText, setImgBg, imgBg }) => {
     }
   };
 
+  // xs
+  // sm
+  // md
+  // lg
+  // xl
+  // 2xl
+
   return (
-    <header>
-      <h2>
-        Vacation <br /> Property{" "}
-      </h2>
-      <nav>
-        <ul>
+    <header className="flex justify-between items-center px-5 py-4">
+      <h2 className="text-xl font-bold font-serif">Vacation Property </h2>
+      <nav className="hidden md:block">
+        <ul className="flex gap-6">
           <li onClick={() => setText("Come")}>Home</li>
           <li onClick={rotateImage}>About</li>
           <li>Payements</li>
           <li>Comment</li>
         </ul>
       </nav>
-      <div className="flex-row">
-        <Button cta={text} />
+      <div className="gap-2 hidden md:flex">
+        <Button cta={text} variant="secondary" />
         {/* {mode === "light" && <Button cta={"Light Mode"} onClick={toggleMode}/>}
       {mode !== "light" && <Button cta ={"Dark Mode"} onClick={toggleMode}/>} */}
         {mode === "light" ? (
@@ -52,6 +56,9 @@ const Header = ({ text, setText, setImgBg, imgBg }) => {
         ) : (
           <Button cta={"Dark Mode"} onClick={toggleMode} />
         )}
+      </div>
+      <div className="md:hidden">
+        <Menu />
       </div>
     </header>
   );

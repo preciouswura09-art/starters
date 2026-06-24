@@ -13,7 +13,7 @@ const App = () => {
   ];
   const [text, setText] = useState("Login");
   const [val, setVal] = useState(1);
-  const [imgBg, setImgBg] = useState(heroImg[1]);
+  const [imgBg, setImgBg] = useState(heroImg[0]);
 
   setInterval(() => {
     setVal(val + 1);
